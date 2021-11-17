@@ -20,26 +20,26 @@
       - @return boolean - true if taken, false if empty.
 <br></br>
 - ConsoleInput.java
-  - Provides handy methods for accepting input in the console.
+  - Provides handy methods for accepting inputs in the console.
   - Methods:
-    - int getInt()
+    - static int getInt()
       - Asks the user to input an integer.
       - Returns min + 1 if invalid min/max.
       - Invalid inputs--Strings and doubles--will not cause errors.
       - @return int - the integer received from the user.
-    - int getInt(String prompt)
+    - static int getInt(String prompt)
       - Asks the user to input an integer with a custom prompt.
       - Invalid inputs--Strings and doubles--will not cause errors.
       - @param prompt - the String used for asking the user for input.
       - @return int - the integer received from the user.
-    - int getIntRange(int min, int max)
+    - static int getIntRange(int min, int max)
       - Asks the user to input an integer within a range.
       - Returns an integer out of the range if invalid min/max.
       - Invalid inputs--Strings and doubles--will not cause errors.
       - @param min - the minimum value the int can be.
       - @param max - the maximum value the int can be.
       - @return int - the int within the range.
-    - int getIntRange(String prompt, int min, int max)
+    - static int getIntRange(String prompt, int min, int max)
       - Asks the user to input an integer within a range with a custom prompt.
       - Returns an integer out of the range if invalid min/max.
       - Invalid inputs--Strings and doubles--will not cause errors.
@@ -47,4 +47,6 @@
       - @param min - the minimum value the int can be.
       - @param max - the maximum value the int can be.
       - @return int - the int within the range.
+    - static void closeScanner()
+      - Closes the input scanner.
 

@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 /**
  * ConsoleInput.java
- * Provides handy methods for accepting integer inputs in the console.
+ * Provides handy methods for accepting inputs in the console.
  *
  * <p>Copyright (c) 2021, Thomas Truong.
  */
 public class ConsoleInput {
-  private Scanner input = new Scanner(System.in);
+  private static Scanner input = new Scanner(System.in);
 
 
   /**
@@ -16,7 +16,7 @@ public class ConsoleInput {
    *
    * @return int - the integer received from the user.
    */
-  public int getInt() {
+  public static int getInt() {
     // Prompt user.
     System.out.println("Enter a number.");
     System.out.print("Input: ");
@@ -38,7 +38,7 @@ public class ConsoleInput {
    * @param prompt - the String used for asking the user for input.
    * @return int - the integer received from the user.
    */
-  public int getInt(String prompt) {
+  public static int getInt(String prompt) {
     // Prompt user.
     System.out.println(prompt);
     System.out.print("Input: ");
@@ -62,7 +62,7 @@ public class ConsoleInput {
    * @param max - the maximum value the int can be.
    * @return int - the int within the range.
    */
-  public int getIntRange(int min, int max) {
+  public static int getIntRange(int min, int max) {
     // Invalid min/max; return an integer out of the range.
     if (min >= max) {
       return min + 1;
@@ -101,7 +101,7 @@ public class ConsoleInput {
    * @param max - the maximum value the int can be.
    * @return int - the int within the range.
    */
-  public int getIntRange(String prompt, int min, int max) {
+  public static int getIntRange(String prompt, int min, int max) {
     // Invalid min/max; return an integer out of the range.
     if (min >= max) {
       return min + 1;
@@ -127,5 +127,12 @@ public class ConsoleInput {
     } while (userInput < min || userInput > max);
     
     return userInput;
+  }
+
+  /**
+   * Closes the input scanner.
+   */
+  public static void closeScanner() {
+    input.close();
   }
 }

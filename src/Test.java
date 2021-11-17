@@ -16,7 +16,7 @@ public class Test {
     b.resetBoard();
     b.printBoard();
 
-    ConsoleInput c = new ConsoleInput();
-    System.out.println("Input was: " + c.getIntRange("ghello", -2, -1));
+    System.out.println("Input was: " + ConsoleInput.getIntRange("ghello", -2, -1));
+    ConsoleInput.closeScanner();
   }
 }
