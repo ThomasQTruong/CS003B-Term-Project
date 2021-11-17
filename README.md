@@ -1,6 +1,7 @@
 # CS 003B Term Project: TicTacToe 2.0
 
 ## By <ins>Thomas Truong</ins>
+
 ## Features:
 - Board.java
   - Mimics a Tic Tac Toe board.

@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 /**
  * ConsoleInput.java
- * Provides handy methods for accepting input in the console.
+ * Provides handy methods for accepting integer inputs in the console.
  *
  * <p>Copyright (c) 2021, Thomas Truong.
  */
 public class ConsoleInput {
   private Scanner input = new Scanner(System.in);
 
-  
+
   /**
    * Asks the user to input an integer.
    * Invalid inputs--Strings and doubles--will not cause errors.
