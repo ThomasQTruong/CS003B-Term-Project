@@ -19,6 +19,10 @@
       - @param col - The column the slot is on.
       - @return boolean - true if taken, false if empty.
 - ConsoleInput.java
-  - Provides handy methods for accepting input.
+  - Provides handy methods for accepting input in the console.
   - Methods:
-    - ...
+    - int getInt()
+      - Asks the user to input an integer.
+      - Invalid inputs--Strings and doubles--will not cause errors.
+      - @return int - the integer received from the user.
+

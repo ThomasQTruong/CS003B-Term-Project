@@ -15,5 +15,8 @@ public class Test {
     Board b = new Board(11);
     b.resetBoard();
     b.printBoard();
+
+    ConsoleInput c = new ConsoleInput();
+    System.out.println("Input was: " + c.getInt());
   }
 }
