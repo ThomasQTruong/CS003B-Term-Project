@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class ConsoleInput {
   private Scanner input = new Scanner(System.in);
 
+  
   /**
    * Asks the user to input an integer.
    * Invalid inputs--Strings and doubles--will not cause errors.
@@ -20,12 +21,111 @@ public class ConsoleInput {
     System.out.println("Enter a number.");
     System.out.print("Input: ");
     // Ask for input and loop if not an integer; if valid, skip loop.
-    while(!input.hasNextInt()) {
+    while (!input.hasNextInt()) {
       System.out.print("Input: ");
       // Eat up the invalid input.
       input.nextLine();
     }
     // Return the correct input.
     return input.nextInt();
+  }
+
+
+  /**
+   * Asks the user to input an integer with a custom prompt.
+   * Invalid inputs--Strings and doubles--will not cause errors.
+   *
+   * @param prompt - the String used for asking the user for input.
+   * @return int - the integer received from the user.
+   */
+  public int getInt(String prompt) {
+    // Prompt user.
+    System.out.println(prompt);
+    System.out.print("Input: ");
+    // Ask for input and loop if not an integer; if valid, skip loop.
+    while (!input.hasNextInt()) {
+      System.out.print("Input: ");
+      // Eat up the invalid input.
+      input.nextLine();
+    }
+    // Return the correct input.
+    return input.nextInt();
+  }
+
+
+  /**
+   * Asks the user to input an integer within a range.
+   * Returns an integer out of the range if invalid min/max.
+   * Invalid inputs--Strings and doubles--will not cause errors.
+   *
+   * @param min - the minimum value the int can be.
+   * @param max - the maximum value the int can be.
+   * @return int - the int within the range.
+   */
+  public int getIntRange(int min, int max) {
+    // Invalid min/max; return an integer out of the range.
+    if (min >= max) {
+      return min + 1;
+    }
+
+    // The user's input.
+    int userInput;
+
+    // Prompt user.
+    System.out.printf("Enter a number that is or between %d and %d.\n", min, max);
+
+    // Repeat the process if number isnt within the range.
+    do {
+      System.out.print("Input: ");
+      // Ask for input and loop if not an integer; if valid, skip loop.
+      while (!input.hasNextInt()) {
+        System.out.print("Input: ");
+        // Eat up the invalid input.
+        input.nextLine();
+      }
+      // Return the correct input.
+      userInput = input.nextInt();
+    } while (userInput < min || userInput > max);
+    
+    return userInput;
+  }
+
+
+  /**
+   * Asks the user to input an integer within a range with a custom prompt.
+   * Returns an integer out of the range if invalid min/max.
+   * Invalid inputs--Strings and doubles--will not cause errors.
+   *
+   * @param prompt - the String used for asking the user for input.
+   * @param min - the minimum value the int can be.
+   * @param max - the maximum value the int can be.
+   * @return int - the int within the range.
+   */
+  public int getIntRange(String prompt, int min, int max) {
+    // Invalid min/max; return an integer out of the range.
+    if (min >= max) {
+      return min + 1;
+    }
+
+    // The user's input.
+    int userInput;
+
+    // Prompt user.
+    System.out.println(prompt);
+
+    // Repeat the process if number isnt within the range.
+    do {
+      System.out.print("Input: ");
+      // Ask for input and loop if not an integer; if valid, skip loop.
+      while (!input.hasNextInt()) {
+        System.out.print("Input: ");
+        // Eat up the invalid input.
+        input.nextLine();
+      }
+      // Return the correct input.
+      userInput = input.nextInt();
+    } while (userInput < min || userInput > max);
+    
+    return userInput;
   }
 }
