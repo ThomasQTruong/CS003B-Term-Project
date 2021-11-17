@@ -5,8 +5,8 @@
  * <p>Copyright (c) 2021, Thomas Truong.
  */
 public class Board {
-  private int board_size = 0;
-  private char board[][];
+  private int boardSize = 0;
+  private char[][] board;
 
   /**
    * Constructor; creates a board of a given size.
@@ -14,7 +14,7 @@ public class Board {
    * @param size - the size of the board.
    */
   public Board(int size) {
-    board_size = size;
+    boardSize = size;
     board = new char[size][size];
   }
 
@@ -22,8 +22,8 @@ public class Board {
    * Initializes the board.
    */
   public void initialize() {
-    for (int row = 0; row < board_size; row++) {
-      for (int col = 0; col < board_size; col++) {
+    for (int row = 0; row < boardSize; row++) {
+      for (int col = 0; col < boardSize; col++) {
         board[row][col] = 'a';
       }
     }
@@ -33,8 +33,8 @@ public class Board {
    * Prints the board.
    */
   public void printBoard() {
-    for (int i = 0; i < board_size; i++) {
-      for (int j = 0; j < board_size; j++) {
+    for (int i = 0; i < boardSize; i++) {
+      for (int j = 0; j < boardSize; j++) {
         System.out.print(board[i][j]);
       }
       System.out.println();
