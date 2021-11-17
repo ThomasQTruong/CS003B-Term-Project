@@ -12,7 +12,7 @@ public class Test {
    * @param args - command-line arguments.
    */
   public static void main(String[] args) {
-    Board b = new Board(3);
+    Board b = new Board(11);
     b.initialize();
     b.printBoard();
   }
