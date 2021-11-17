@@ -14,9 +14,8 @@ public class Test {
   public static void main(String[] args) {
     Board b = new Board(11);
     b.resetBoard();
+    b.markBoardAt(0, 0);
+    b.markBoardAt(0, 0);
     b.printBoard();
-
-    System.out.println("Input was: " + ConsoleInput.getIntRange("ghello", -2, -1));
-    ConsoleInput.closeScanner();
   }
 }

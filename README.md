@@ -13,12 +13,14 @@
       - Resets the board; also used for initializing.
     - void printBoard()
       - Prints the board in a grid format.
-    - boolean isSlotTaken()
-      - Checks whether a specific slot on the board is taken or not.
+    - boolean isSlotEmpty()
+      - Checks whether a specific slot on the board is empty or not.
       - @param row - The row the slot is on.
       - @param col - The column the slot is on.
-      - @return boolean - true if taken, false if empty.
+      - @return boolean - true if empty, false if taken.
+
 <br></br>
+
 - ConsoleInput.java
   - Provides handy methods for accepting inputs in the console.
   - Methods:
