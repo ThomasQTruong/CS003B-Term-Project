@@ -13,7 +13,7 @@ public class Test {
    */
   public static void main(String[] args) {
     Board b = new Board(11);
-    b.initialize();
+    b.resetBoard();
     b.printBoard();
   }
 }
