@@ -5,8 +5,9 @@
  * <p>Copyright (c) 2021, Thomas Truong.
  */
 public class Board {
-  private int boardSize = 0;             // The size of the board.
-  private char[][] board;                // The game board itself.
+  private int boardSize = 0;  // The size of the board.
+  private char[][] board;     // The game board itself.
+
 
   /**
    * Constructor, creates a board of a given size.
@@ -17,6 +18,7 @@ public class Board {
     boardSize = size;
     board = new char[size][size];
   }
+
 
   /**
    * Resets the board; also used for initializing.
@@ -30,6 +32,7 @@ public class Board {
       }
     }
   }
+
 
   /**
    * Prints the board in a grid format.
@@ -56,6 +59,7 @@ public class Board {
     }
   }
 
+
   /**
    * Checks whether a specific slot on the board is empty or not.
    *
@@ -66,6 +70,7 @@ public class Board {
   public boolean isSlotEmpty(int row, int col) {
     return board[row][col] == '.';
   }
+
 
   /**
    * Marks the board at a certain coordinate.
@@ -79,7 +84,6 @@ public class Board {
     if (!isSlotEmpty(row, col)) {
       return false;  // Unsuccessful call.
     }
-
     // Slot is not taken, continue.
     board[row][col] = 'X';             // Mark the board with player's symbol.
     
