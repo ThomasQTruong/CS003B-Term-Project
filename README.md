@@ -73,6 +73,8 @@
     - char getMark()
       - Gets the player's mark.
       - @return char - the player's mark.
-    - static void resetMarks()
-      - Clears all of the existing marks from marks.
+    - boolean remove(char m)
+      - Removes the mark from the set.
+      - @param m - the mark to remove from the set.
+      - @return boolean - true if removed successfully, false if unsuccessful.
 

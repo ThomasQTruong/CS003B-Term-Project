@@ -70,9 +70,12 @@ public class Player {
 
 
   /**
-   * Clears all of the existing marks from marks.
+   * Removes the mark from the set.
+   *
+   * @param m - the mark to remove from the set.
+   * @return boolean - true if removed successfully, false if unsuccessful.
    */
-  public static void resetMarks() {
-    marks.clear();
+  public boolean remove(char m) {
+    return marks.remove(m);
   }
 }
