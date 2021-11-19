@@ -48,4 +48,17 @@ public class TicTacToeV2Util {
     // Valid winAmount given.
     amountToWin = winAmount;
   }
+
+
+  /**
+   * Checks whether the game ended or not.
+   * 0 indicates it is not over; no win/tie.
+   * 1 indicates that it is over; win.
+   * 2 indicates that it is over; tie.
+   *
+   * @return int - the number that indicates the status of the game.
+   */
+  public static int isGameOver(Board board) {
+    return 0;
+  }
 }

@@ -23,6 +23,9 @@
       - @param row - the x coordinate.
       - @param col - the y coordinate.
       - @return boolean - true if successfully marked, false if unsuccessful.
+    - int size()
+      - Retrieves the size of the board.
+      - @return int - the board size.
 
 <br/>
 

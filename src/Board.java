@@ -5,7 +5,7 @@
  * <p>Copyright (c) 2021, Thomas Truong.
  */
 public class Board {
-  private int boardSize = 0;  // The size of the board.
+  private int boardSize;  // The size of the board.
   private char[][] board;     // The game board itself.
 
 
@@ -88,5 +88,15 @@ public class Board {
     board[row][col] = 'X';             // Mark the board with player's symbol.
     
     return true;  // Successfully marked.
+  }
+
+
+  /**
+   * Retrieves the size of the board.
+   *
+   * @return int - the board size.
+   */
+  public int size() {
+    return boardSize;
   }
 }
