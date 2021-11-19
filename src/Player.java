@@ -78,4 +78,14 @@ public class Player {
   public boolean remove(char m) {
     return marks.remove(m);
   }
+
+
+  /**
+   * Gets the total number of marks.
+   *
+   * @return int - the number of marks in the set.
+   */
+  public static int size() {
+    return marks.size();
+  }
 }

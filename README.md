@@ -77,4 +77,6 @@
       - Removes the mark from the set.
       - @param m - the mark to remove from the set.
       - @return boolean - true if removed successfully, false if unsuccessful.
-
+    - static int size()
+      - Gets the total number of marks.
+      - @return int - the number of marks in the set.
