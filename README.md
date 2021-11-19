@@ -24,7 +24,7 @@
       - @param col - the y coordinate.
       - @return boolean - true if successfully marked, false if unsuccessful.
 
-<br></br>
+<br/>
 
 - ConsoleInput.java
   - Provides handy methods for accepting inputs in the console.
@@ -57,7 +57,7 @@
     - static void closeScanner()
       - Closes the input scanner.
 
-<br></br>
+<br/>
 
 - Player.java
   - Stores the data of a player.
