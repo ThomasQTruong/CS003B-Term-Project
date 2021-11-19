@@ -67,4 +67,12 @@ public class Player {
   public char getMark() {
     return mark;
   }
+
+
+  /**
+   * Clears all of the existing marks from marks.
+   */
+  public static void resetMarks() {
+    marks.clear();
+  }
 }

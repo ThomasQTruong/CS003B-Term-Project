@@ -18,6 +18,11 @@
       - @param row - The row the slot is on.
       - @param col - The column the slot is on.
       - @return boolean - true if empty, false if taken.
+    - boolean markBoardAt(int row, int col)
+      - Marks the board at a certain coordinate.
+      - @param row - the x coordinate.
+      - @param col - the y coordinate.
+      - @return boolean - true if successfully marked, false if unsuccessful.
 
 <br></br>
 
@@ -51,4 +56,23 @@
       - @return int - the int within the range.
     - static void closeScanner()
       - Closes the input scanner.
+
+<br></br>
+
+- Player.java
+  - Stores the data of a player.
+  - Methods:
+    - Player(char m)
+      - Constructor, creates a player.
+      - Will throw IllegalArgumentExceptions if mark is invalid or taken.
+      - @param m - the mark the player will be.
+    - boolean markExist(char m)
+      - Checks whether a mark is already in used by another player.
+      - @param m - the mark to check for.
+      - @return boolean - true if exists, false if does not exist.
+    - char getMark()
+      - Gets the player's mark.
+      - @return char - the player's mark.
+    - static void resetMarks()
+      - Clears all of the existing marks from marks.
 
