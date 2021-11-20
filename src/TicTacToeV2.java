@@ -14,7 +14,12 @@ public class TicTacToeV2 {
 
     // Gets the amount of players and sets the players up.
     for (int player = 1; player <= getPlayers(); player++) {
-      System.out.printf("Player %d, choose your symbol.", player);
+      char symbol;
+      do {
+        symbol = ConsoleInput.getChar("Player " + player + ", choose your symbol.");
+      } while (Player.)
+
+
       players.add(null);
     }
   }

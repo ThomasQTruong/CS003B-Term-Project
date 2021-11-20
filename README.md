@@ -92,7 +92,7 @@
       - Constructor, creates a player.
       - Will throw IllegalArgumentExceptions if mark is invalid or taken.
       - @param m - the mark the player will be.
-    - boolean markExist(char m)
+    - static boolean markExist(char m)
       - Checks whether a mark is already in used by another player.
       - @param m - the mark to check for.
       - @return boolean - true if exists, false if does not exist.
