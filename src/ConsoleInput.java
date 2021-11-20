@@ -72,7 +72,7 @@ public class ConsoleInput {
     int userInput;
 
     // Prompt user.
-    System.out.printf("Enter a number that is or between %d and %d.\n", min, max);
+    System.out.printf("Enter a number that is between or equal to %d and %d.\n", min, max);
 
     // Repeat the process if number isnt within the range.
     do {
