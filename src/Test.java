@@ -12,6 +12,11 @@ public class Test {
    * @param args - command-line arguments.
    */
   public static void main(String[] args) {
+    System.out.println(ConsoleInput.getInt());
+    System.out.println(ConsoleInput.getIntRange(1, 2));
+    System.out.println(ConsoleInput.getChar());
+    System.out.println(ConsoleInput.getChar());
+
     Board b = new Board(11);
     Player x = new Player('X');
     Player z = new Player('Z');

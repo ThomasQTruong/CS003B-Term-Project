@@ -73,6 +73,13 @@
       - @param min - the minimum value the int can be.
       - @param max - the maximum value the int can be.
       - @return int - the int within the range.
+    - static char getChar()
+      - Asks the user to input a character.
+      - @return char - the character that the user inputted.
+    - static char getChar(String prompt)
+      - Asks the user to input a character using a prompt.
+      - @param prompt - the prompt to use to ask the user for input.
+      - @return char - the character that the user inputted.
     - static void closeScanner()
       - Closes the input scanner.
 

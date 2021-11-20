@@ -129,6 +129,36 @@ public class ConsoleInput {
     return userInput;
   }
 
+
+  /**
+   * Asks the user to input a character.
+   *
+   * @return char - the character that the user inputted.
+   */
+  public static char getChar() {
+    // Prompt user.
+    System.out.println("Enter a letter.");
+    System.out.print("Input: ");
+
+    // Return the first character in the input.
+    return input.next().charAt(0);
+  }
+
+
+  /**
+   * Asks the user to input a character using a prompt.
+   *
+   * @param prompt - the prompt to use to ask the user for input.
+   * @return char - the character that the user inputted.
+   */
+  public static char getChar(String prompt) {
+    System.out.println(prompt);
+    System.out.print("Input: ");
+
+    return input.next().charAt(0);
+  }
+
+
   /**
    * Closes the input scanner.
    */
