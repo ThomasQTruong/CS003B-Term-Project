@@ -18,10 +18,33 @@ public class Player {
   /**
    * Constructor, creates a player.
    * Will throw IllegalArgumentExceptions if mark is invalid or taken.
+   * <p>"Player(char m): invalid mark." will be thrown if invalid.</p>
+   * <p>"Player(char m): the mark already exists." will be thrown if taken.</p>
    *
    * @param m - the mark the player will be.
    */
   public Player(char m) {
+    if (!validMark(m)) {
+      throw new IllegalArgumentException("Player(char m): invalid mark.");
+    }
+    // Already exists!
+    if (marks.contains(m)) {
+      throw new IllegalArgumentException("Player(char m): the mark already exists.");
+    }
+    
+    // Passed every check; valid mark.
+    marks.add(m);
+    mark = m;
+  }
+
+
+  /**
+   * Checks whether the mark is valid or not.
+   *
+   * @param m - the mark.
+   * @return boolean - true if valid, false if invalid.
+   */
+  public static boolean validMark(char m) {
     switch (m) {
       // Cannot be a period since its part of the board.
       case '.':
@@ -33,18 +56,11 @@ public class Player {
       case '\b':
       case '\r':
       case '\f':
-        throw new IllegalArgumentException("Invalid mark passed to Player(char m).");
+        return false;
       default:
-        // Do nothing.
+        // Passed every case, valid mark.
+        return true;
     }
-    // Already exists!
-    if (marks.contains(m)) {
-      throw new IllegalArgumentException("The mark " + m + " already exists!");
-    }
-    
-    // Passed every check; valid mark.
-    marks.add(m);
-    mark = m;
   }
 
 
@@ -54,7 +70,7 @@ public class Player {
    * @param m - the mark to check for.
    * @return boolean - true if exists, false if does not exist.
    */
-  public boolean markExist(char m) {
+  public static boolean markExists(char m) {
     return marks.contains(m);
   }
 
