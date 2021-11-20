@@ -100,6 +100,14 @@ public class Player {
 
 
   /**
+   * Clears all of the marks in the set.
+   */
+  public static void removeAll() {
+    marks.clear();
+  }
+
+
+  /**
    * Retrieves the player's id number. 
    *
    * @return int - the player's id number.

@@ -110,6 +110,8 @@
       - Removes the mark from the set.
       - @param m - the mark to remove from the set.
       - @return boolean - true if removed successfully, false if unsuccessful.
+    - static void removeAll()
+      - Clears all of the marks in the set.
     - static int size()
       - Gets the total number of marks.
       - @return int - the number of marks in the set.
@@ -143,3 +145,23 @@
       - @param col - the last move's column index.
       - @param mark - last move's player's mark.
       - @return int - the number that indicates the status of the game.
+
+<br/>
+
+- TicTacToeV2.java
+  - A playable console game for 3 to 10 players.
+  - Methods:
+    - static void main(String[] args)
+      - The main function; the program begins here.
+      - @param args - Command-line arguments.
+    - static void game()
+      - The full game itself.
+    - static int getPlayers()
+      - Asks the user to input the amount of players playing.
+      - @return int - the amount of players playing.
+    - static int getWinCondition()
+      - Asks the user for the amount of marks in a row needed to win.
+      - @return int - the amount needed to win.
+    - static char playAgain()
+      - Asks the user if they would like to play again.
+      - @return char - the user's choice.

@@ -14,7 +14,13 @@ public class TicTacToeV2 {
    * @param args - Command-line arguments.
    */
   public static void main(String[] args) {
-    game();
+    // Repeat the game until the user does not want to anymore.
+    do {
+      game();
+    } while (playAgain() == 'y');
+
+    // User doesn't want to play anymore.
+    System.out.println("Thanks for playing!");
   }
 
 
@@ -23,6 +29,7 @@ public class TicTacToeV2 {
    */
   public static void game() {
     // The list of players.
+    Player.removeAll();  // Makes sure the list is cleared.
     ArrayList<Player> playerList = new ArrayList<Player>();
 
     // Gets the amount of players. 
@@ -79,7 +86,7 @@ public class TicTacToeV2 {
       board.printBoard();
       
       // Ask player for their move.
-      System.out.printf("Player %d, enter a move.\n", util.getPlayerTurn());
+      System.out.printf("Player %d (%s), enter a move.\n", util.getPlayerTurn(), playerMark);
       // Keeps track whether move is valid or not.
       boolean validMove;
       // Repeat until player put a valid move.
@@ -107,6 +114,7 @@ public class TicTacToeV2 {
       // No one won, print that there was a tie.
       System.out.println("There was a tie!");
     }
+    System.out.println();  // Skip line to format console.
   }
 
 
@@ -130,5 +138,29 @@ public class TicTacToeV2 {
     System.out.println("How many marks in a row to win?");
     // The amount to win can only be from 3 to [Player.Size + 1].
     return ConsoleInput.getIntRange(3, Player.size() + 1);
+  }
+
+
+  /**
+   * Asks the user if they would like to play again.
+   *
+   * @return char - the user's choice.
+   */
+  public static char playAgain() {
+    char choice;
+
+    // Keep asking user if choice isnt y or n.
+    do {
+      choice = ConsoleInput.getChar("Would you like to play again? [y/n]");
+      // If the user's input is uppercased, convert to lowercase.
+      if (choice == 'Y') {
+        choice = 'y';
+      } else if (choice == 'N') {
+        choice = 'n';
+      }
+    } while (choice != 'y' && choice != 'n');
+    System.out.println();  // Skip line to format console.
+
+    return choice;
   }
 }
