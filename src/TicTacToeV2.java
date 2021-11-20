@@ -14,13 +14,20 @@ public class TicTacToeV2 {
    * @param args - Command-line arguments.
    */
   public static void main(String[] args) {
-    Board board;
-    TicTacToeV2Util util;
+    game();
+  }
+
+
+  /**
+   * The full game itself.
+   */
+  public static void game() {
     // The list of players.
     ArrayList<Player> playerList = new ArrayList<Player>();
 
     // Gets the amount of players. 
     int amountOfPlayers = getPlayers();
+    System.out.println();  // Skip line to format console.
 
     // Sets the players up.
     for (int playerNumber = 1; playerNumber <= amountOfPlayers; playerNumber++) {
@@ -49,28 +56,57 @@ public class TicTacToeV2 {
         }
       } while (mark == ' ');
     }
+    System.out.println();  // Skip line to format console.
 
     // Set up the board and util.
-    board = new Board(Player.size() + 1);
-    util = new TicTacToeV2Util(getWinCondition());
+    Board board = new Board(Player.size() + 1);
+    TicTacToeV2Util util = new TicTacToeV2Util(getWinCondition());
+    System.out.println();  // Skip line to format console.
 
-    int row;
-    int col;
+    int row;          // The row the player chose.
+    int col;          // The column the player chose.
+    char playerMark;  // The player's mark.
+
+    // Repeat until someone wins or until a tie occurs.
     do {
+      // Increase the turn.
+      util.nextTurn();
+
+      // Get player's mark.
+      playerMark = playerList.get(util.getPlayerTurn() - 1).getMark();
+
       // Print the board.
       board.printBoard();
+      
+      // Ask player for their move.
       System.out.printf("Player %d, enter a move.\n", util.getPlayerTurn());
+      // Keeps track whether move is valid or not.
       boolean validMove;
+      // Repeat until player put a valid move.
       do {
         row = ConsoleInput.getIntRange("Enter the row: ", 0, Player.size());
         col = ConsoleInput.getIntRange("Enter the column: ", 0, Player.size());
-        validMove = board.markBoardAt(row, col, playerList.get(util.getPlayerTurn()).getMark());
+        validMove = board.markBoardAt(row, col, playerMark);
+        
+        // If move is invalid.
         if (validMove == false) {
           System.out.println("Invalid coordinate. Try again.");
         }
       } while (validMove == false);
-      System.out.println(playerList.get(util.getPlayerTurn()).getMark());
-    } while (util.isGameOver(board, row, col, playerList.get(util.getPlayerTurn()).getMark()) == 0);
+      System.out.println();  // Skip line to format console.
+    } while (util.isGameOver(board, row, col, playerMark) == 0);
+    
+    // Print the board.
+    board.printBoard();
+    
+    // Check if it was a win or tie.
+    if (util.isGameOver(board, row, col, playerMark) == 1) {
+      // Someone won, print the winner.
+      System.out.printf("Player %d (%s) wins!\n", util.getPlayerTurn(), playerMark);
+    } else {
+      // No one won, print that there was a tie.
+      System.out.println("There was a tie!");
+    }
   }
 
 

@@ -9,9 +9,9 @@ public class TicTacToeV2Util {
   // Setting; the amount of marks in a row needed to win.
   private int amountToWin;
   // The current turn number.
-  private int turn = 1;
+  private int turn = 0;
   // The current player's turn.
-  private int playerTurn = 1;
+  private int playerTurn = 0;
 
 
   /**
