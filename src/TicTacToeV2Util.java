@@ -6,9 +6,10 @@
  */
 
 public class TicTacToeV2Util {
-  private static int amountToWin;
+  // Setting; the amount of marks in a row needed to win.
+  private int amountToWin;
 
-  
+
   /**
    * Constructor; configures amountToWin.
    *
@@ -63,7 +64,7 @@ public class TicTacToeV2Util {
    * @param mark - last move's player's mark.
    * @return int - the number that indicates the status of the game.
    */
-  public static int isGameOver(Board board, int row, int col, char mark) {
+  public int isGameOver(Board board, int row, int col, char mark) {
     // The amount of marks in a row.
     int count = 1;
     

@@ -13,6 +13,12 @@ public class Test {
    */
   public static void main(String[] args) {
     Board b = new Board(11);
+    Player x = new Player('X');
+    Player z = new Player('Z');
+    Player c = new Player('C');
+    Player e = new Player('E');
+    TicTacToeV2Util t = new TicTacToeV2Util(5);
+
     b.resetBoard();
     b.markBoardAt(0, 0);
     b.markBoardAt(1, 1);
@@ -37,6 +43,9 @@ public class Test {
     b.markBoardAt(5, 1);
 
     b.printBoard();
-    TicTacToeV2Util.isGameOver(b, 3, 3, 'X');
+    System.out.println(t.isGameOver(b, 3, 3, 'X'));
+    if (t.isGameOver(b, 3, 3, 'X') == 1) {
+      System.out.println("Winner!");
+    }
   }
 }

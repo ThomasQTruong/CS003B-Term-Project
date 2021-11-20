@@ -111,7 +111,7 @@
     - void setAmountToWin(int winAmount)
       - Sets the value of amountToWin to a different number.
       - @param winAmount - the amount of marks needed in a row to win.
-    - static int isGameOver(Board board, int row, int col, char mark)
+    - int isGameOver(Board board, int row, int col, char mark)
       - Checks whether the game ended or not.
       - 0 indicates it is not over; no win/tie.
       - 1 indicates that it is over; win.
