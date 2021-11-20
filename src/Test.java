@@ -2,7 +2,7 @@
  * Test.java
  * Used for unit testing.
  *
- * <p>Copyright (c) 2021, Thomas Truong.
+ * <p>Copyright (c) 2021, Thomas Truong.</p>
  */
 
 public class Test {

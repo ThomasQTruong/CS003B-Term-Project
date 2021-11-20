@@ -2,7 +2,7 @@
  * Board.java
  * Mimics a Tic Tac Toe board.
  *
- * <p>Copyright (c) 2021, Thomas Truong.
+ * <p>Copyright (c) 2021, Thomas Truong.</p>
  */
 public class Board {
   private int boardSize;   // The size of the board.
@@ -104,14 +104,16 @@ public class Board {
   /**
    * Checks if one of the edges matches a mark.
    * The edge will be based on the edge number.
-   * 1 2 3
-   * 8 X 4
-   * 7 6 5
-   * X is the initial mark.
-   * 1-8 represents the edge number.
-   * This function has a recursive structure.
+   * <p>1 2 3</p>
+   * <p>8 X 4</p>
+   * <p>7 6 5</p>
+   *
+   * <p>X is the initial mark.
+   * 1-8 represents the edge number.</p>
+   *
+   * <p>This function has a recursive structure.
    * It will keep checking the next edges until the mark does not match.
-   * Keeps track of the amount of times matched and returns it.
+   * Keeps track of the amount of times matched and returns it.</p>
    *
    * @param row - The row that the initial mark is on.
    * @param col - The column that the initial mark is on.

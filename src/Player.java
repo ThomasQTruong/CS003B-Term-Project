@@ -5,7 +5,7 @@ import java.util.Set;
  * Player.java
  * Stores the data of a player.
  *
- * <p>Copyright (c) 2021, Thomas Truong.
+ * <p>Copyright (c) 2021, Thomas Truong.</p>
  */
 
 public class Player {

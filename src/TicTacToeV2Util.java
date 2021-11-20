@@ -2,7 +2,7 @@
  * TicTacToeV2Util.java
  * Utility methods and variables for Tic Tac Toe V2.
  *
- * <p>Copyright (c) 2021, Thomas Truong.
+ * <p>Copyright (c) 2021, Thomas Truong.</p>
  */
 
 public class TicTacToeV2Util {
@@ -54,9 +54,9 @@ public class TicTacToeV2Util {
 
   /**
    * Checks whether the game ended or not.
-   * 0 indicates it is not over; no win/tie.
-   * 1 indicates that it is over; win.
-   * 2 indicates that it is over; tie.
+   * <p>0 indicates it is not over; no win/tie.</p>
+   * <p>1 indicates that it is over; win.</p>
+   * <p>2 indicates that it is over; tie.</p>
    *
    * @param board - the tic tac toe board.
    * @param row - the last move's row index.

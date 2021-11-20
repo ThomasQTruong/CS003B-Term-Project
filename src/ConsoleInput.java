@@ -4,7 +4,7 @@ import java.util.Scanner;
  * ConsoleInput.java
  * Provides handy methods for accepting inputs in the console.
  *
- * <p>Copyright (c) 2021, Thomas Truong.
+ * <p>Copyright (c) 2021, Thomas Truong.</p>
  */
 public class ConsoleInput {
   private static Scanner input = new Scanner(System.in);
