@@ -5,8 +5,8 @@
  * <p>Copyright (c) 2021, Thomas Truong.
  */
 public class Board {
-  private int boardSize;  // The size of the board.
-  private char[][] board;     // The game board itself.
+  private int boardSize;   // The size of the board.
+  private char[][] board;  // The game board itself.
 
 
   /**
@@ -98,5 +98,55 @@ public class Board {
    */
   public int size() {
     return boardSize;
+  }
+
+
+  /**
+   * Checks if one of the edges matches a mark.
+   * The edge will be based on the edge number.
+   * 1 2 3
+   * 8 X 4
+   * 7 6 5
+   * X is the initial mark.
+   * 1-8 represents the edge number.
+   * This function has a recursive structure.
+   * It will keep checking the next edges until the mark does not match.
+   * Keeps track of the amount of times matched and returns it.
+   *
+   * @param row - The row that the initial mark is on.
+   * @param col - The column that the initial mark is on.
+   * @param mark - The mark to match with.
+   * @param edgeNumber - The edge 
+   * @return int - the amount of times the edge matched the mark.
+   */
+  public int checkEdge(int row, int col, char mark, int edgeNumber) {
+    // Modify row.
+    if (edgeNumber <= 3) {
+      row--;
+    } else if (edgeNumber >= 5 && edgeNumber <= 7) {
+      row++;
+    }
+
+    // Modify column.
+    if (edgeNumber == 1 || edgeNumber == 7 || edgeNumber == 8) {
+      col--;
+    } else if (edgeNumber >= 3 && edgeNumber <= 5) {
+      col++;
+    }
+
+    // Base cases, no edge to check!
+    if (row < 0 || row > boardSize) {
+      return 0;
+    } else if (col < 0 || col > boardSize) {
+      return 0;
+    }
+
+    if (board[row][col] == mark) {
+      // Mark matches; recursively check if it continues on and add 1 to the return.
+      return checkEdge(row, col, mark, edgeNumber) + 1;
+    } else {
+      // Did not match.
+      return 0;
+    }
   }
 }

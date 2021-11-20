@@ -26,6 +26,22 @@
     - int size()
       - Retrieves the size of the board.
       - @return int - the board size.
+    - int checkEdge(int row, int col, char mark, int edgeNumber)
+      - Checks if one of the edges matches a mark.
+      - The edge will be based on the edge number.
+      - 1 2 3
+      - 8 X 4
+      - 7 6 5
+      - X is the initial mark.
+      - 1-8 represents the edge number.
+      - This function has a recursive structure.
+      - It will keep checking the next edges until the mark does not match.
+      - Keeps track of the amount of times matched and returns it.
+      - @param row - The row that the initial mark is on.
+      - @param col - The column that the initial mark is on.
+      - @param mark - The mark to match with.
+      - @param edgeNumber - The edge 
+      - @return int - the amount of times the edge matched the mark.
 
 <br/>
 
@@ -83,3 +99,25 @@
     - static int size()
       - Gets the total number of marks.
       - @return int - the number of marks in the set.
+
+<br/>
+
+- TicTacToeV2Util.java
+  - Utility methods and variables for Tic Tac Toe V2.
+  - Methods:
+    - TicTacToeV2Util(int winAmount)
+      - Constructor; configures amountToWin.
+      - @param winAmount - the amount of marks needed in a row to win.
+    - void setAmountToWin(int winAmount)
+      - Sets the value of amountToWin to a different number.
+      - @param winAmount - the amount of marks needed in a row to win.
+    - static int isGameOver(Board board, int row, int col, char mark)
+      - Checks whether the game ended or not.
+      - 0 indicates it is not over; no win/tie.
+      - 1 indicates that it is over; win.
+      - 2 indicates that it is over; tie.
+      - @param board - the tic tac toe board.
+      - @param row - the last move's row index.
+      - @param col - the last move's column index.
+      - @param mark - last move's player's mark.
+      - @return int - the number that indicates the status of the game.
