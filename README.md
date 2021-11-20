@@ -18,10 +18,11 @@
       - @param row - The row the slot is on.
       - @param col - The column the slot is on.
       - @return boolean - true if empty, false if taken.
-    - boolean markBoardAt(int row, int col)
+    - boolean markBoardAt(int row, int col, char mark)
       - Marks the board at a certain coordinate.
       - @param row - the x coordinate.
       - @param col - the y coordinate.
+      - @param mark - the player's mark.
       - @return boolean - true if successfully marked, false if unsuccessful.
     - int size()
       - Retrieves the size of the board.
@@ -124,6 +125,14 @@
     - void setAmountToWin(int winAmount)
       - Sets the value of amountToWin to a different number.
       - @param winAmount - the amount of marks needed in a row to win.
+    - void nextTurn()
+      - Tells the game that it is the next turn.
+    - int getTurn()
+      - Retrieves the current turn number.
+      - @return int - the current turn.
+    - int getPlayerTurn()
+      - Retrieves which player's turn.
+      - @return int - the player number of whoever's turn it is.
     - int isGameOver(Board board, int row, int col, char mark)
       - Checks whether the game ended or not.
       - 0 indicates it is not over; no win/tie.

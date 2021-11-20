@@ -8,6 +8,10 @@
 public class TicTacToeV2Util {
   // Setting; the amount of marks in a row needed to win.
   private int amountToWin;
+  // The current turn number.
+  private int turn = 1;
+  // The current player's turn.
+  private int playerTurn = 1;
 
 
   /**
@@ -49,6 +53,40 @@ public class TicTacToeV2Util {
 
     // Valid winAmount given.
     amountToWin = winAmount;
+  }
+
+
+  /**
+   * Tells the game that it is the next turn.
+   */
+  public void nextTurn() {
+    turn++;
+    // Calculate next player's turn.
+    playerTurn = (playerTurn + 1) % Player.size();
+    // Since playerTurn is 0, that means its Player.size()'s turn.
+    if (playerTurn == 0) {
+      playerTurn = Player.size();
+    }
+  }
+
+
+  /**
+   * Retrieves the current turn number.
+   *
+   * @return int - the current turn.
+   */
+  public int getTurn() {
+    return turn;
+  }
+
+
+  /**
+   * Retrieves which player's turn.
+   *
+   * @return int - the player number of whoever's turn it is.
+   */
+  public int getPlayerTurn() {
+    return playerTurn;
   }
 
 

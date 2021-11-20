@@ -13,6 +13,8 @@ public class Player {
   private static Set<Character> marks = new HashSet<Character>();
   // The player's mark on the board.
   private char mark;
+  // Player's id number.
+  private int playerNumber;
 
 
   /**
@@ -23,7 +25,7 @@ public class Player {
    *
    * @param m - the mark the player will be.
    */
-  public Player(char m) {
+  public Player(char m, int p) {
     if (!validMark(m)) {
       throw new IllegalArgumentException("Player(char m): invalid mark.");
     }
@@ -35,6 +37,7 @@ public class Player {
     // Passed every check; valid mark.
     marks.add(m);
     mark = m;
+    playerNumber = p;
   }
 
 
@@ -93,6 +96,16 @@ public class Player {
    */
   public boolean remove(char m) {
     return marks.remove(m);
+  }
+
+
+  /**
+   * Retrieves the player's id number. 
+   *
+   * @return int - the player's id number.
+   */
+  public int getPlayerNumber() {
+    return playerNumber;
   }
 
 

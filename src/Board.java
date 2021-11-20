@@ -15,8 +15,12 @@ public class Board {
    * @param size - the size of the board.
    */
   public Board(int size) {
+    // Creates the board.
     boardSize = size;
     board = new char[size][size];
+    
+    // Initializes the board.
+    resetBoard();
   }
 
 
@@ -77,15 +81,16 @@ public class Board {
    *
    * @param row - the x coordinate.
    * @param col - the y coordinate.
+   * @param mark - the player's mark.
    * @return boolean - true if successfully marked, false if unsuccessful.
    */
-  public boolean markBoardAt(int row, int col) {
+  public boolean markBoardAt(int row, int col, char mark) {
     // Slot is taken, can't mark!
     if (!isSlotEmpty(row, col)) {
       return false;  // Unsuccessful call.
     }
     // Slot is not taken, continue.
-    board[row][col] = 'X';             // Mark the board with player's symbol.
+    board[row][col] = mark;  // Mark the board with player's symbol.
     
     return true;  // Successfully marked.
   }
@@ -137,9 +142,9 @@ public class Board {
     }
 
     // Base cases, no edge to check!
-    if (row < 0 || row > boardSize) {
+    if (row < 0 || row >= boardSize) {
       return 0;
-    } else if (col < 0 || col > boardSize) {
+    } else if (col < 0 || col >= boardSize) {
       return 0;
     }
 
