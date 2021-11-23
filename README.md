@@ -166,6 +166,8 @@
       - Asks the user if they would like to play again.
       - @return char - the user's choice.
 
+<br/>
+
 ## How to Play:
 1. Enter the number of players that will be playing [3 to 10].
 2. Choose a unique mark for every player.
