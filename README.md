@@ -165,3 +165,13 @@
     - static char playAgain()
       - Asks the user if they would like to play again.
       - @return char - the user's choice.
+
+## How to Play:
+1. Enter the amount of players that will be playing [3 to 10].
+2. Choose a unique mark for every player.
+3. Choose the amount of marks needed in a row to win [3 to playerCount-1].
+4. Every player has a turn to choose where to place their marks.
+    - First, you enter the row number that you want to mark at.
+    - Then, you enter the column number that you want to mark at.
+5. Once the game ends (win/tie), you can choose to quit or play again.
+    - The same process repeats.
