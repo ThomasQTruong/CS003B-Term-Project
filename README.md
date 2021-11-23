@@ -175,5 +175,9 @@
 4. Every player has a turn to choose where to place their marks.
     - First, you enter the row number that you want to mark at.
     - Then, you enter the column number that you want to mark at.
-5. Once the game ends (win/tie), you can choose to quit or play again.
-    - The same process repeats.
+5. Once the game ends (win/tie), you can choose to play again or not [y/n].
+    -	Win if a player gets n number of marks in a row.
+    -	Tie if the board is fully filled out and no one won.
+    -	The same process repeats if play again is chosen.
+    -	Otherwise, the program ends.
+
